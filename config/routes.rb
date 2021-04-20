@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       scope 'directors' do
         get '/show/:id', to: 'directors#show', as: 'show_directors'
         post '/create', to: 'directors#create', as: 'create_directors'
+        get '/meus_filmes/:id', to: 'directors#meus_filmes', as: 'meus_filmes_directors'
       end
       scope 'movies' do
         get '/index', to: 'movies#index', as: 'index_movies'
